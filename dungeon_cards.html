@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>atomantic/JavaScript-Playing-Cards @ GitHub</title>
+     <link rel="stylesheet" type="text/css" media="all" href="playingCards.ui.css"/>
+</head>
+
+<body>
+	<h2>Drawn Cards</h2>
+    <div id="yourHand"></div>
+
+    <hr>
+
+	 <h2>Class Deck</h2>
+    <div id="classDeck"></div>
+    
+    <hr>
+
+    <h2>Encounter Deck</h2>
+    <div id="encounterDeck"></div>
+    
+    <h2>Item/Prop Deck</h2>
+    <div id="itemDeck"></div>
+    
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="dungeonCards.js"></script>
+    <script type="text/javascript" src="playingCards.ui.js"></script>
+    <script type="text/javascript">
+        /*
+         * example throwing cards on the table
+         */
+        $(document).ready(function(){
+            var classDeck = $("#classDeck").playingCards();
+            classDeck.spread(); // show it
+
+            var encounterDeck = $("#encounterDeck").playingCards();
+            encounterDeck.spread(); // show it
+
+            var itemDeck = $("#itemDeck").playingCards();
+            itemDeck.spread(); // show it
+
+        });
+    </script>	
+
+
+
+
+</body>
+</html>
